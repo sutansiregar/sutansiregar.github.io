@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sutan Siregar | Data Analyst Portfolio</title>
+    <style>
+        /* ===== GLOBAL ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #1e293b;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .header .title {
+            font-size: 1.2rem;
+            color: #475569;
+            font-weight: 500;
+        }
+
+        .header .tagline {
+            color: #64748b;
+            margin-top: 0.3rem;
+        }
+
+        .social-links {
+            margin-top: 0.8rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: #1e293b;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.3rem 0.8rem;
+            background: #f1f5f9;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+
+        .social-links a:hover {
+            background: #1e293b;
+            color: white;
+        }
+
+        /* ===== SECTION ===== */
+        .section {
+            margin-top: 2.5rem;
+        }
+
+        .section h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #0f172a;
+            border-left: 5px solid #3b82f6;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .section p,
+        .section li {
+            color: #334155;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .section ul li::before {
+            content: "▹";
+            color: #3b82f6;
+            font-weight: 700;
+        }
+
+        /* ===== PROJECT CARDS ===== */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .project-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 14px;
+            border: 1px solid #e2e8f0;
+            transition: 0.2s;
+        }
+
+        .project-card:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.08);
+        }
+
+        .project-card h3 {
+            font-size: 1.1rem;
+            color: #0f172a;
+            margin-bottom: 0.4rem;
+        }
+
+        .project-card .badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 0.15rem 0.7rem;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            color: #475569;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 0.8rem;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 700px) {
+            .container {
+                padding: 1.5rem 1rem;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .avatar {
+                width: 90px;
+                height: 90px;
+                font-size: 2.2rem;
+            }
+
+            .header h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <header class="header">
+            <div class="avatar">SS</div>
+            <div>
+                <h1>Sutan Siregar</h1>
+                <div class="title">📊 Data Analyst</div>
+                <div class="tagline">
+                    Python · SQL · Data Visualization · Business Insights
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/sutansiregar" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/muhammad-sutan-siregar-ba4408192" target="_blank">LinkedIn</a>
+                    <a href="mailto:muhammadsutan05@gmail.com">Email</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== ABOUT ===== -->
+        <section class="section">
+            <h2>👋 Tentang Saya</h2>
+            <p>
+                Saya adalah <strong>Data Analyst</strong> dengan ketertarikan besar dalam mengubah data mentah
+                menjadi wawasan bisnis yang actionable. Saya terbiasa menggunakan <strong>Python, SQL,</strong>
+                dan berbagai tools visualisasi untuk membersihkan data, menganalisis tren, dan menyajikan
+                temuan secara jelas kepada stakeholder.
+            </p>
+            <p style="margin-top: 0.6rem;">
+                Saat ini saya fokus mengembangkan portofolio project di bidang <strong>retail analytics,
+                customer segmentation, funnel analysis, dan cohort retention.</strong>
+            </p>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section class="section">
+            <h2>🛠️ Keahlian Teknis</h2>
+            <ul>
+                <li><strong>Bahasa:</strong> Python (pandas, numpy, matplotlib, seaborn), SQL</li>
+                <li><strong>Visualisasi:</strong> Matplotlib, Seaborn, Tableau, Power BI</li>
+                <li><strong>Database:</strong> PostgreSQL, MySQL</li>
+                <li><strong>Lainnya:</strong> Git & GitHub, VS Code, Excel, LaTeX (Overleaf)</li>
+            </ul>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section class="section">
+            <h2>📁 Project Portfolio</h2>
+
+            <div class="project-grid">
+
+                <!-- PROJECT 1 -->
+                <div class="project-card">
+                    <div class="badge">⭐ Featured</div>
+                    <h3>🛍️ Retail Sales Analysis</h3>
+                    <p>
+                        Analisis 106 transaksi penjualan ritel (Rp 53 juta). Mencakup data cleaning,
+                        revenue analysis, conversion funnel, cohort retention, dan RFM segmentation.
+                    </p>
+                    <p>
+                        <strong>Tools:</strong> Python, Pandas, Matplotlib, Seaborn
+                    </p>
+                    <a href="https://github.com/sutansiregar/retail-sales-analysis" target="_blank">
+                        🔗 Lihat Repository →
+                    </a>
+                    <br />
+                    <a href="https://github.com/sutansiregar/retail-sales-analysis/blob/main/Retail_Analytics_Report.pdf" target="_blank">
+                        📄 Download Laporan PDF
+                    </a>
+                </div>
+
+                <!-- PROJECT 2 (Tempat untuk project berikutnya) -->
+                <div class="project-card">
+                    <div class="badge">🚧 Coming Soon</div>
+                    <h3>📈 [Project Berikutnya]</h3>
+                    <p>
+                        Tambahkan project Anda di sini nanti.
+                    </p>
+                    <p>
+                        <strong>Tools:</strong> -
+                    </p>
+                    <a href="#" style="color: #94a3b8; cursor: default;">
+                        🔗 Belum tersedia
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section class="section">
+            <h2>📬 Kontak</h2>
+            <p>
+                📧 <a href="mailto:muhammadsutan05@gmail.com">muhammadsutan05@gmail.com</a><br />
+                🔗 <a href="https://linkedin.com/in/muhammad-sutan-siregar-ba4408192" target="_blank">LinkedIn</a> ·
+                <a href="https://github.com/sutansiregar" target="_blank">GitHub</a>
+            </p>
+            <p style="margin-top: 0.6rem; font-size: 0.9rem; color: #94a3b8;">
+                &copy; 2026 Sutan Siregar.
+            </p>
+        </section>
+
+    </div>
+
+</body>
+</html>
